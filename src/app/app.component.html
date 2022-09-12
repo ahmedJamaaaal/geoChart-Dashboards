@@ -12,12 +12,12 @@
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li  nz-menu-item  [routerLink]="/home" nzSelected>
+      <li  nz-menu-item   (click)="navigateTo('home')">
         <span nz-icon nzType="home"></span>
         <span>Home</span>
    
       </li>
-      <li nz-menu-item [routerLink]="/dashboard" >
+      <li nz-menu-item  (click)="navigateTo('dashboard')">
         <span nz-icon nzType="dashboard"></span>
         <span>Dashboard</span>
       </li>

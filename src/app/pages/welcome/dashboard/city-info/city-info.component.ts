@@ -37,8 +37,11 @@ info:any;
     
 // }
 ngOnChanges(changes: any): void {
-  const searchChar:string = changes.region?.currentValue[0] || ''
-  const charData:any= this.data.find(element => element.cityCode === searchChar
+  const searchChar:any = changes.region;
+  const test= Array.isArray(searchChar.currentValue);
+  if(test){
+  const item:any= searchChar.currentValue[0];
+  const charData:any= this.data.find(element => element.cityCode === item
     
     );
    if(charData !== null){
@@ -46,7 +49,8 @@ ngOnChanges(changes: any): void {
     this.info  = charData;
     console.log(this.info);
     
-   }
+   
+  }}
     
 }
 
