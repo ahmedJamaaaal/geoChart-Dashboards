@@ -12,14 +12,14 @@
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li  nz-menu-item nzTitle="home" nzIcon="home">
-        <a routerLink="/home">home</a>
-        
+      <li  nz-menu-item  routerLink="/home" nzSelected>
+        <span nz-icon nzType="home"></span>
+        <span>Home</span>
    
       </li>
-      <li nz-menu-item nzTitle="Dashboard" nzIcon="dashboard">
-        <a routerLink="/dashboard">Dashboard</a>
-   
+      <li nz-menu-item routerLink="/dashboard">
+        <span nz-icon nzType="dashboard"></span>
+        <span>Dashboard</span>
       </li>
      
     </ul>
