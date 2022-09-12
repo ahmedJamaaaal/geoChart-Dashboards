@@ -1,0 +1,11 @@
+<div nz-row [nzGutter]="4" [nzJustify]="'space-around'">
+
+
+<div nz-col nzXs="4" nzSm="4" nzMd="4" nzLg="4" nzXl="4" *ngFor="let item of chartsInfo.data; let i = index"
+[attr.data-index]="i" (click)="viewDetails(item.result)">
+  <nz-card [nzTitle]='item.name' >
+    <nz-progress [nzPercent]="item.value" nzType="circle" [nzStrokeColor]="item.color" [nzWidth]="100"></nz-progress>
+  </nz-card>
+</div>
+
+</div>

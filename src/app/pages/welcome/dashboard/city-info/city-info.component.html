@@ -1,0 +1,19 @@
+ 
+  <h1 *ngIf="region.length > 0">{{region[1]}} City</h1>
+<!-- 
+<h5>Region Name {{info.tittle}} City</h5> -->
+<!-- {{info.color}} -->
+  <div  *ngFor="let item of charData">
+    <span>{{item.name}}</span>
+    <nz-progress [nzPercent]="item.value" nzSize="small"   [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"></nz-progress>
+  </div>
+<!-- <nz-tabset [nzTabPosition]="'top'">
+
+<nz-tab  *ngFor="let base of basicTabs; let i = index" [attr.data-index]="i" nzTitle="{{base.name}}">
+    <nz-descriptions [nzColumn]="2" nzTitle="Calculation">
+      <nz-descriptions-item nzTitle="Weight" [nzSpan]="1">26</nz-descriptions-item>
+      <nz-descriptions-item nzTitle="bmi" [nzSpan]="1">25</nz-descriptions-item>
+
+    </nz-descriptions>
+  </nz-tab>
+</nz-tabset> -->

@@ -1,0 +1,14 @@
+mydataset = [
+  ['Maharashtra',
+    10
+  ],
+  ['Karnataka',
+    20
+  ],
+  ['Punjab',
+    30
+  ],
+  ['Gujarat',
+    40
+]
+]

@@ -1,0 +1,27 @@
+<div nz-row [nzGutter]="12">
+
+
+  <div nz-col nzXs="18" nzSm="18" nzMd="18" nzLg="18" nzXl="18">
+    <nz-card nzTitle="Weekly Reports">
+      <nz-tabset  >
+
+        <nz-tab *ngFor="let item of weeklyData;"   [nzTitle]="item.tittle">
+          <app-weekly-report [chartsInfo]="item" (resultCreated)=onResultCreated($event)></app-weekly-report>
+        </nz-tab>
+      </nz-tabset>
+
+    </nz-card>
+  </div>
+    <div nz-col nzXs="6" nzSm="6" nzMd="6" nzLg="6" nzXl="6">
+
+      <nz-card nzTitle="Details">
+        <div *ngFor="let item of result">
+          <span>{{item.name}}</span>
+          <nz-progress [nzPercent]="item.value" nzSize="small"   [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"></nz-progress>
+        </div>
+      </nz-card>
+    </div>
+
+
+</div>
+
